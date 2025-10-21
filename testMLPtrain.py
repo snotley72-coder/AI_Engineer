@@ -22,10 +22,8 @@ def read_2d(file_path):
             data.append(row)
     return data
 
-
 # Read in Power, Velocity, Position and prevDepths
-
-# Read in depths
+# (outputs are set to create a one-step ahead predictor)
 
 file_path = 'inps.csv'
 inputs = read_2d(file_path)
@@ -63,5 +61,6 @@ plt.xlabel('X')
 plt.ylabel('y')
 plt.legend()
 plt.show()
+
 
 JobLib.dump(mlp_regressor, 'mlp_regressor_model.joblib')
