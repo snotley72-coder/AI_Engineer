@@ -23,7 +23,11 @@ def read_2d(file_path):
             data.append(row)
     return data
 
+# Load a trained model
+
 model = JobLib.load('mlp_regressor_model.joblib')
+
+# Read input file and set-up output array
 
 file_path = 'inps.csv'
 inputs = read_2d(file_path)
@@ -31,10 +35,12 @@ inputs=np.array(np.float64(inputs))
 
 outputs=np.zeros(136)
 
+# Set initial conditions from input file
+
 inps=inputs[0:1,:]
 inps[0,0]=0.5
 
-# Run trained MLP in NARX recurrent set up
+# Run trained MLP in NARX recurrent set up from initial conditions
 
 for i in range(136):
     pred=model.predict(inps)
@@ -49,3 +55,4 @@ for i in range(136):
     inps[0,5]=pred
 
 plt.plot(outputs)
+
