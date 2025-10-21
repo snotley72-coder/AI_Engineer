@@ -9,11 +9,12 @@ There are two main code files:
 
 (b) testMLP.py tests the networks when configured as part of the recurrence in a NARX approach. The network is given
     an initial condition (velocity and laser power), makes a prediction of the next output, feeds predicted output back to the input,
-    and repeats generating a whole simulated sequence.
+    and repeats (either for the same process parameters or for changing parameters. e.g. changing laser power) generating a whole simulated sequence.
 
 The networks are trained for a number of representative manufacturing process settings for a triangular process path.
 
 
  
+
 
 
