@@ -1,4 +1,5 @@
-The code in this repository was for HPC deployment as part of research using ensembles of neural networks as the non-linearity in a NARX approach to time series prediction for additive manufacturing.
+The code in this repository was for HPC deployment as part of research using ensembles of neural networks as the non-linearity 
+in a NARX approach to time series prediction for additive manufacturing.
 
 There are two main code files: 
 
@@ -14,4 +15,5 @@ The networks are trained for a number of representative manufacturing process se
 
 
  
+
 
